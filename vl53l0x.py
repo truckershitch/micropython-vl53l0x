@@ -572,4 +572,4 @@ class VL53L0X:
             "SHDN" pin is pulled HIGH again the default I2C address is ``0x29``.
         """
         self._write_u8(_I2C_SLAVE_DEVICE_ADDRESS, new_address & 0x7F)
-        self._i2c.device_address = new_address
+        self._addr = new_address
